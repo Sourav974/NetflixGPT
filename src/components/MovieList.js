@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import MovieCard from "./MovieCard";
 
 const MovieList = ({ title, movies }) => {
-  console.log("movies......", movies);
+  // console.log("movies......", movies);
 
   return (
     <div className="px-6 ">
@@ -11,7 +11,7 @@ const MovieList = ({ title, movies }) => {
       <div className="flex overflow-x-scroll">
         <div className="flex">
           {movies?.map((movie) => (
-            <MovieCard posterPath={movie.poster_path} />
+            <MovieCard key={movie.id} posterPath={movie.poster_path} />
           ))}
         </div>
       </div>
